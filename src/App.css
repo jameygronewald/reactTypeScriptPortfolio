@@ -1,19 +1,36 @@
 * {
+    height: 100%;
     margin: 0;
     padding: 0;
 }
 
 .container {
     display: grid;
-    grid-template-columns: 15% auto;
+    grid-template-columns: 20% auto;
 }
 
-navColumn {
-    grid-column-start: 0;
-    grid-column-end: 1;
-}
-
-mainColumn {
+.navColumn {
+    position: fixed;
+    width: 20%;
     grid-column-start: 1;
+    grid-column-end: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.navLink {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.mainColumn {
+    grid-column-start: 2;
     grid-column-end: 2;
+}
+
+.bigHeader {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 4rem;
 }
