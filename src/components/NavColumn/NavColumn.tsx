@@ -1,18 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "../NavLink/NavLink";
 
 export const NavColumn = () => {
   return (
     <>
-      <Link to="/" className="navLink">
-        Home
-      </Link>
-      <Link to="/projects" className="navLink">
-        Projects
-      </Link>
-      <Link to="/contact" className="navLink">
-        Contact
-      </Link>
+      <NavLink name="Home" pathName="" />
+      <NavLink name="Projects" pathName="projects" />
+      <NavLink name="Contact" pathName="contact" />
     </>
   );
 };
