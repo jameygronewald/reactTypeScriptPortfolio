@@ -77,22 +77,40 @@ html, body {
     box-shadow: 10px 10px 8px 5px #222;
 }
 
-.bioText {
-    margin: 20px;
+.bioText1 {
+    height: auto;
+    margin: auto;
     grid-column: 2;
     grid-row: 2 / 4;
-    font-size: 1rem;
-    text-align: justify;
+    font-size: 1.2rem;
+    text-align: center;
 }
 
-.iconGrid {
+.bioText2 {
+    height: auto;
+    margin: auto;
     grid-column: 2;
-    grid-row: 3;
+    grid-row: 5 / 7;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.iconGridMERN {
+    grid-column: 2;
+    grid-row: 4;
     display: grid;
     grid-template: 100% / 20% 20% 20% 20% 20%;
     column-gap: 15px;
 }
 
-.codeIcon {
-    
+.iconGridTools {
+    grid-column: 2 / 4;
+    grid-row: 7;
+    display: grid;
+    grid-template: 100% / repeat(9, 10%);
+    column-gap: 15px;
+}
+
+#reactIcon {
+    font-size: 100px;
 }
