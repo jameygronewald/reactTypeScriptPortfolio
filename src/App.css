@@ -7,7 +7,8 @@ html, body {
     margin: 0;
     padding: 0;
     color: #222;
-    /* background-color: #f4f4f4; */
+    font-family: 'Inconsolata', monospace;
+    background-color: #f4f4f4;
 }
 
 .container {
@@ -21,7 +22,7 @@ html, body {
     grid-column: 1;
     display: grid;
     grid-template: 20% 20% 20% 20% 20% / 50% 50%;
-    border-right: solid 3px #f4f4f4;
+    border-right: solid 3px #222;
 }
 
 .navRow {
@@ -48,7 +49,7 @@ html, body {
 
 .homeContainer {
     display: grid;
-    grid-template: 120px 50px 50px 150px / 5% 45% 50%;
+    grid-template: repeat(8, 100px) / 5% 1fr 1fr;
 }
 
 .bigHeader {
@@ -79,7 +80,19 @@ html, body {
 .bioText {
     margin: 20px;
     grid-column: 2;
-    grid-row: 3 / 4;
+    grid-row: 2 / 4;
     font-size: 1rem;
     text-align: justify;
+}
+
+.iconGrid {
+    grid-column: 2;
+    grid-row: 3;
+    display: grid;
+    grid-template: 100% / 20% 20% 20% 20% 20%;
+    column-gap: 15px;
+}
+
+.codeIcon {
+    
 }
