@@ -57,6 +57,7 @@ html, body {
     grid-row: 1;
     margin: auto;
     font-size: 3rem;
+    font-weight: bold;
     height: auto;
 }
 
@@ -69,7 +70,7 @@ html, body {
 
 .bioImage {
     grid-column: 3;
-    grid-row: 2 / 4;
+    grid-row: 3 / 5;
     height: 300px;
     width: auto;
     margin: auto;
@@ -83,7 +84,7 @@ html, body {
     grid-column: 2;
     grid-row: 2 / 4;
     font-size: 1.2rem;
-    text-align: center;
+    /* text-align: justify; */
 }
 
 .bioText2 {
@@ -92,7 +93,7 @@ html, body {
     grid-column: 2;
     grid-row: 5 / 7;
     font-size: 1.2rem;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .iconGridMERN {
@@ -111,6 +112,6 @@ html, body {
     column-gap: 15px;
 }
 
-#reactIcon {
+.enlargeIcon {
     font-size: 100px;
 }

@@ -171,7 +171,7 @@ export const IconGridMERN = () => {
       />
       <CodeIcon
         iconHTML={
-          <i id="reactIcon" className="devicon-react-original-wordmark colored"></i>
+          <i className="enlargeIcon devicon-react-original-wordmark colored"></i>
         }
       />
       <CodeIcon
