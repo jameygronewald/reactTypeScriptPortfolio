@@ -5,7 +5,7 @@ import { ContactIcon } from "../ContactIcon/ContactIcon";
 export const NavColumn = () => {
   return (
     <>
-      <NavLink name="Welcome" pathName="" />
+      <NavLink name="Welcome" pathName="welcome" />
       <NavLink name="Projects" pathName="projects" />
       <NavLink name="Contact" pathName="contact" />
       <ContactIcon id ="gitHubIcon"
