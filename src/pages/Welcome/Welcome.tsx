@@ -5,10 +5,10 @@ import { BioText } from "../../components/BioText/BioText";
 import { IconGridMERN } from "../../components/IconGrids/IconGridMERN";
 import { IconGridTools } from "../../components/IconGrids/IconGridTools";
 
-export const Home = () => {
+export const Welcome = () => {
   return (
-    <div className="homeContainer">
-      <BigHeader text="Welcome. My name is Jamey." />
+    <div className="welcomeContainer">
+      <BigHeader class="welcomeHeader" text="Welcome. My name is Jamey." />
       <BioImage />
       <BioText
         class="bioText1"

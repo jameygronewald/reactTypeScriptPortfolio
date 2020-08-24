@@ -21,7 +21,7 @@ html, body {
     width: 20%;
     grid-column: 1;
     display: grid;
-    grid-template: 20% 20% 20% 20% 20% / 50% 50%;
+    grid-template: 12% 12% 12% 24% 12% 6% 12% auto / 50% 50%;
     border-right: solid 3px #222;
 }
 
@@ -39,6 +39,18 @@ html, body {
     height: 1.5rem;
 }
 
+#gitHubIcon {
+    grid-column: 1 / 3;
+    grid-row: 5;
+    margin: auto;
+}
+
+#linkedInIcon {
+    grid-column: 1 / 3;
+    grid-row: 7;
+    margin: auto;
+}
+
 .navSpacer {
     height: 300%;
 }
@@ -47,12 +59,12 @@ html, body {
     grid-column: 2;
 }
 
-.homeContainer {
+.welcomeContainer {
     display: grid;
     grid-template: repeat(8, 100px) / 5% 1fr 1fr;
 }
 
-.bigHeader {
+.welcomeHeader {
     grid-column: 1 / 4;
     grid-row: 1;
     margin: auto;
@@ -84,7 +96,6 @@ html, body {
     grid-column: 2;
     grid-row: 2 / 4;
     font-size: 1.2rem;
-    /* text-align: justify; */
 }
 
 .bioText2 {
@@ -93,7 +104,6 @@ html, body {
     grid-column: 2;
     grid-row: 5 / 7;
     font-size: 1.2rem;
-    /* text-align: center; */
 }
 
 .iconGridMERN {
@@ -114,4 +124,32 @@ html, body {
 
 .enlargeIcon {
     font-size: 100px;
+}
+
+.projectsContainer {
+    display: grid;
+    grid-template: repeat(8, 100px) / 5% 1fr 1fr 1fr 1fr;
+}
+
+.projectsHeader {
+    grid-column: 1 / 6;
+    grid-row: 1;
+    margin: auto;
+    font-size: 3rem;
+    font-weight: bold;
+    height: auto;
+}
+
+.contactContainer {
+    display: grid;
+    grid-template: repeat(8, 100px) / 5% 1fr 1fr;
+}
+
+.contactHeader {
+    grid-column: 1 / 4;
+    grid-row: 1;
+    margin: auto;
+    font-size: 3rem;
+    font-weight: bold;
+    height: auto;
 }

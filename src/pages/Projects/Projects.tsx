@@ -3,8 +3,8 @@ import { BigHeader } from "../../components/BigHeader/BigHeader";
 
 export const Projects = () => {
   return (
-    <>
-      <BigHeader text="Here are some things I've been working on." />
-    </>
+    <div className="projectsContainer">
+      <BigHeader class="projectsHeader" text="Here are some things I've been working on." />
+    </div>
   );
 };

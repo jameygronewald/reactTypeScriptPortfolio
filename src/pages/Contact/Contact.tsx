@@ -3,8 +3,8 @@ import { BigHeader } from "../../components/BigHeader/BigHeader";
 
 export const Contact = () => {
   return (
-    <>
-      <BigHeader text="Let's connect and work on something." />
-    </>
+    <div className="contactContainer">
+      <BigHeader class="contactHeader" text="Let's connect and build something." />
+    </div>
   );
 };
