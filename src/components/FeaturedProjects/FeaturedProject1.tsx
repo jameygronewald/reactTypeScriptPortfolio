@@ -3,7 +3,7 @@ import { SmallHeader } from "../SmallHeader/SmallHeader";
 import { RegularText } from "../RegularText/RegularText";
 import { IconGridTrackPacker } from "../IconGrids/IconGridTrackPacker";
 
-export const FeaturedProject = () => {
+export const FeaturedProject1 = () => {
   return (
     <>
       <SmallHeader text="TrackPacker" id="trackPackerHeader" />
