@@ -128,16 +128,28 @@ html, body {
 
 .projectsContainer {
     display: grid;
-    grid-template: repeat(8, 100px) / 5% 1fr 1fr 1fr 1fr;
+    grid-template: repeat(8, 100px) / repeat(10, 1fr);
 }
 
 .projectsHeader {
-    grid-column: 1 / 6;
+    grid-column: 1 / 11;
     grid-row: 1;
     margin: auto;
     font-size: 3rem;
     font-weight: bold;
     height: auto;
+}
+
+
+.trackPackerImageContainer {
+    grid-column: 2 / 10;
+    grid-row: 3 / 7;
+    align-items: center;
+}
+
+.trackPackerImage {
+    width: auto;
+    align-self: center;
 }
 
 .contactContainer {
