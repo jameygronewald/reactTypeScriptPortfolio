@@ -1,6 +1,6 @@
 import React from "react";
 
-export const BioText = (props: {class: string, text: string}) => {
+export const RegularText = (props: {class: string, text: string}) => {
   return (
     <>
       <div className={props.class}>
