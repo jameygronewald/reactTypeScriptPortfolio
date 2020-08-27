@@ -1,22 +1,9 @@
 import React, { useState } from "react";
 import { BigHeader } from "../../components/BigHeader/BigHeader";
-// import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
-
-// const useStyles = makeStyles((theme: Theme) =>
-//   createStyles({
-//     root: {
-//       "& .MuiTextField-root": {
-//         margin: theme.spacing(1),
-//         width: "40%",
-//       },
-//     },
-//   })
-// );
+import Button from "@material-ui/core/Button";
 
 export const Contact = () => {
-  // const classes = useStyles();
-
   const [formData, setFormData] = useState({});
 
   const handleSubmit = (e: any) => {
@@ -30,10 +17,10 @@ export const Contact = () => {
         class="contactHeader"
         text="Let's connect and build something."
       />
-      <form onSubmit={handleSubmit} /* className={classes.root} */>
+      <form onSubmit={handleSubmit}>
         <div className="formRow1">
           <TextField
-          className="input"
+            className="input"
             required
             label="First Name"
             variant="outlined"
@@ -43,7 +30,7 @@ export const Contact = () => {
             }}
           />
           <TextField
-          className="input"
+            className="input"
             required
             label="Last Name"
             variant="outlined"
@@ -55,7 +42,7 @@ export const Contact = () => {
         </div>
         <div className="formRow2">
           <TextField
-          className="input"
+            className="input"
             required
             label="Email"
             variant="outlined"
@@ -65,7 +52,7 @@ export const Contact = () => {
             }}
           />
           <TextField
-          className="input"
+            className="input"
             label="Phone Number"
             variant="outlined"
             name="email"
@@ -88,7 +75,7 @@ export const Contact = () => {
           />
         </div>
         <div className="formRow4">
-          <input type="submit" value="submit" />
+          <Button type="submit" value="submit" variant="contained" color="primary" className="submitButton" >Reach Out!</Button>
         </div>
       </form>
     </div>

@@ -139,15 +139,15 @@ html, body {
 }
 
 #trackPackerHeader {
-    grid-column: 5 / 7;
+    grid-column: 4 / 6;
     grid-row: 2;
     display: grid;
     align-content: center;
-    font-weight: bold;
+    font-weight: 1000;
 }
 
 .trackPackerImageContainer {
-    grid-column: 3 / 9;
+    grid-column: 2 / 8;
     grid-row: 3 / 6;
     display: grid;
     justify-items: center;
@@ -157,11 +157,12 @@ html, body {
     border: outset 3px #222;
     border-radius: 10px;
     box-shadow: 5px 5px 4px 2.5px #222;
+    width: 100%
 }
 
 #repoButton1 {
-    grid-column: 1 / 3;
-    grid-row: 4;
+    grid-column: 8 / 11;
+    grid-row: 3 / 5;
     height: 50px;
     width: 175px;
     align-self: center;
@@ -169,8 +170,8 @@ html, body {
 }
 
 #deployedButton1 {
-    grid-column: 9 / 11;
-    grid-row: 4;
+    grid-column: 8 / 11;
+    grid-row: 4 / 6;
     height: 50px;
     width: 175px;
     align-self: center;
@@ -178,15 +179,15 @@ html, body {
 }
 
 .trackPackerDesc {
-    grid-column: 3 / 9;
+    grid-column: 2 / 10;
     grid-row: 6;
     display: grid;
     align-items: center;
-    text-align: center;
+    text-align: justify;
 }
 
 .iconGridTrackPacker {
-    grid-column: 1 / 11;
+    grid-column: 2 / 10;
     grid-row: 7 / 9;
     row-gap: 10px;
     display: grid;
@@ -195,15 +196,15 @@ html, body {
 }
 
 #bookKeeperHeader {
-    grid-column: 5 / 7;
+    grid-column: 4 / 6;
     grid-row: 10;
     display: grid;
     align-content: center;
-    font-weight: bold;
+    font-weight: 1000;
 }
 
 .bookKeeperImageContainer {
-    grid-column: 3 / 9;
+    grid-column: 2 / 8;
     grid-row: 11 / 14;
     display: grid;
     justify-items: center;
@@ -213,11 +214,12 @@ html, body {
     border: outset 3px #222;
     border-radius: 10px;
     box-shadow: 5px 5px 4px 2.5px #222;
+    width: 100%;
 }
 
 #repoButton2 {
-    grid-column: 1 / 3;
-    grid-row: 12;
+    grid-column: 8 / 11;
+    grid-row: 11 / 13;
     height: 50px;
     width: 175px;
     align-self: center;
@@ -225,8 +227,8 @@ html, body {
 }
 
 #deployedButton2 {
-    grid-column: 9 / 11;
-    grid-row: 12;
+    grid-column: 8 / 11;
+    grid-row: 12 / 14;
     height: 50px;
     width: 175px;
     align-self: center;
@@ -234,15 +236,15 @@ html, body {
 }
 
 .bookKeeperDesc {
-    grid-column: 3 / 9;
+    grid-column: 2 / 10;
     grid-row: 14;
     display: grid;
     align-items: center;
-    text-align: center;
+    text-align: justify;
 }
 
 .iconGridBookKeeper {
-    grid-column: 1 / 11;
+    grid-column: 2 / 10;
     grid-row: 15 / 17;
     row-gap: 10px;
     display: grid;
@@ -295,14 +297,14 @@ form {
     justify-items: center;
 }
 
+.input {
+    width: 100%;
+}
+
 .formRow3 {
     grid-row: 3;
     grid-column: 1 / 5;
     justify-self: center;
-    width: 100%;
-}
-
-.input {
     width: 100%;
 }
 
@@ -314,4 +316,8 @@ form {
     grid-row: 4;
     grid-column: 2 / 4;
     justify-self: center;
+}
+
+.submitButton {
+    height: 70%;
 }
