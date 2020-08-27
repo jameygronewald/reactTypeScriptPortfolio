@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { BigHeader } from "../../components/BigHeader/BigHeader";
+import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
 
 export const Contact = () => {
   const [formData, setFormData] = useState({});
@@ -17,42 +19,64 @@ export const Contact = () => {
       />
       <form onSubmit={handleSubmit}>
         <div className="formRow1">
-          <input
-            type="text"
+          <TextField
+            className="input"
+            required
+            label="First Name"
+            variant="outlined"
             name="firstName"
-            placeholder="First Name"
             onChange={e => {
               setFormData({ ...formData, firstName: e.target.value });
             }}
           />
-          <input
-            type="text"
+          <TextField
+            className="input"
+            required
+            label="Last Name"
+            variant="outlined"
             name="lastName"
-            placeholder="Last Name"
             onChange={e => {
               setFormData({ ...formData, lastName: e.target.value });
             }}
           />
         </div>
         <div className="formRow2">
-          <input
-            type="text"
+          <TextField
+            className="input"
+            required
+            label="Email"
+            variant="outlined"
             name="email"
-            placeholder="Email"
             onChange={e => {
               setFormData({ ...formData, email: e.target.value });
             }}
           />
-          <input
-            type="textarea"
+          <TextField
+            className="input"
+            label="Phone Number"
+            variant="outlined"
+            name="email"
+            onChange={e => {
+              setFormData({ ...formData, phone: e.target.value });
+            }}
+          />
+        </div>
+        <div className="formRow3">
+          <TextField
+            label="Enter message here"
+            className="messageInput"
+            multiline
+            rows={4}
+            variant="outlined"
             name="message"
-            placeholder="Enter message here"
             onChange={e => {
               setFormData({ ...formData, message: e.target.value });
             }}
           />
         </div>
-        <input type="submit" value="submit" />
+        <div className="formRow4">
+          <Button type="submit" value="submit" variant="contained" color="primary" className="submitButton" >Reach Out!</Button>
+        </div>
       </form>
     </div>
   );
