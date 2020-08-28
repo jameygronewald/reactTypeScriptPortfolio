@@ -331,7 +331,7 @@ form {
     column-gap: 25px;
     row-gap: 25px;
     display: grid;
-    grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+    grid-template: 1fr 1fr 3fr 2fr / 1fr 1fr 1fr 1fr;
 }
 
 .formRow1 {
