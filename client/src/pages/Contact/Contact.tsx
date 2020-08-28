@@ -5,6 +5,8 @@ import { ContactInfo } from "../../components/ContactInfo/ContactInfo";
 import { ButtonLink } from "../../components/ButtonLink/ButtonLink";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
+// import sendEmail from "../../utils/nodeMailerHelper";
+import axios from "axios";
 const resume = require("../../assets/resume.pdf");
 
 export const Contact = () => {
@@ -12,7 +14,11 @@ export const Contact = () => {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    console.log(formData);
+    submitMessage(formData);
+  };
+
+  const submitMessage = (messageBody: {}) => {
+    axios.post("/sendEmail", messageBody).then(data => console.log(data));
   };
 
   return (
