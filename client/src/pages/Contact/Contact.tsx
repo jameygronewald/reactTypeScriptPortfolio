@@ -18,7 +18,7 @@ export const Contact = () => {
   };
 
   const submitMessage = (messageBody: {}) => {
-    axios.post("/sendEmail", messageBody).then(data => console.log(data));
+    axios.post("/sendEmail", messageBody).then(response => console.log(response));
   };
 
   return (
@@ -59,25 +59,13 @@ export const Contact = () => {
           <TextField
             className="input"
             required
-            label="First Name"
+            label="Name"
             variant="outlined"
-            name="firstName"
+            name="name"
             onChange={e => {
-              setFormData({ ...formData, firstName: e.target.value });
+              setFormData({ ...formData, name: e.target.value });
             }}
           />
-          <TextField
-            className="input"
-            required
-            label="Last Name"
-            variant="outlined"
-            name="lastName"
-            onChange={e => {
-              setFormData({ ...formData, lastName: e.target.value });
-            }}
-          />
-        </div>
-        <div className="formRow2">
           <TextField
             className="input"
             required
@@ -86,6 +74,17 @@ export const Contact = () => {
             name="email"
             onChange={e => {
               setFormData({ ...formData, email: e.target.value });
+            }}
+          />
+        </div>
+        <div className="formRow2">
+          <TextField
+            className="input"
+            label="Company"
+            variant="outlined"
+            name="company"
+            onChange={e => {
+              setFormData({ ...formData, company: e.target.value });
             }}
           />
           <TextField
