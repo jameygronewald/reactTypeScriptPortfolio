@@ -20,6 +20,15 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
+app.post('/sendEmail', (req, res) => {
+  console.log(req.body);
+  res.json({
+    error: false,
+    body: req.body,
+    message: `Logging email with from ${req.body.firstName}`
+  });
+});
+
 app.listen(PORT, () => {
   console.log(`Express server running on http://localhost:${PORT}`);
 });
