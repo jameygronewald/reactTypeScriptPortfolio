@@ -113,7 +113,7 @@ export const Contact = () => {
             color="primary"
             className="submitButton"
           >
-            Reach Out!
+            Submit
           </Button>
         </div>
       </form>
