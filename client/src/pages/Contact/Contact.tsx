@@ -24,6 +24,7 @@ export const Contact = () => {
   const submitMessage = (messageBody: {}) => {
     axios.post("/sendEmail", messageBody).then(response => {
       sentEmailToast(response.data.message);
+      // add a ref to clear out inputs
     })
     .catch(err => {
       console.log(err)
