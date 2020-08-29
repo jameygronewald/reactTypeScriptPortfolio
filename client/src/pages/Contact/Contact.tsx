@@ -7,10 +7,14 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 // import sendEmail from "../../utils/nodeMailerHelper";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const resume = require("../../assets/resume.pdf");
 
 export const Contact = () => {
   const [formData, setFormData] = useState({});
+
+  const sentEmailToast = (message: string) => toast.info(message);
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -18,11 +22,17 @@ export const Contact = () => {
   };
 
   const submitMessage = (messageBody: {}) => {
-    axios.post("/sendEmail", messageBody).then(response => console.log(response));
+    axios.post("/sendEmail", messageBody).then(response => {
+      sentEmailToast(response.data.message);
+    })
+    .catch(err => {
+      console.log(err)
+    });
   };
 
   return (
     <div className="contactContainer">
+      <ToastContainer className="emailToast" position="top-right" autoClose={5000} hideProgressBar />
       <BigHeader
         class="contactHeader"
         text="Let's connect and build something."

@@ -380,3 +380,8 @@ form {
 .submitButton {
     height: 50%;
 }
+
+.emailToast {
+    height: auto;
+    margin-top: 25px;
+}
