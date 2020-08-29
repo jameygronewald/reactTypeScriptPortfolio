@@ -1,5 +1,7 @@
 const express = require("express");
 const path = require("path");
+const nodemailer = require("nodemailer");
+// const xoauth2 = require("xoauth2");
 
 const app = express();
 
@@ -32,11 +34,32 @@ app.post("/sendEmail", (req, res) => {
   </ul>
   <p>Message: ${req.body.message}</p>
   `;
-  const firstName = req.body.name.split(' ')[0];
-  res.json({
-    error: false,
-    message: `Thanks for reaching out, ${firstName}. I look forward to talking with you soon!`,
+
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: "jameygronewaldportfolio@gmail.com",
+      pass: "ferial08",
+    },
   });
+
+  transporter
+    .sendMail({
+      from: `'Nodemailer Contact: ${req.body.name}' <jameygronewaldportfolio@gmail.com>`,
+      to: "jrgronewald@gmail.com",
+      subject: "Someone contacted you via Nodemailer from your Portfolio",
+      html: messageBody,
+    })
+    .then(response => {
+      const firstName = req.body.name.split(" ")[0];
+      res.json({
+        error: false,
+        message: `Your email has been sent! Thanks for reaching out, ${firstName}-- I look forward to talking with you soon!`,
+      });
+    })
+    .catch(err => {
+      console.log(err);
+    });
 });
 
 app.listen(PORT, () => {
