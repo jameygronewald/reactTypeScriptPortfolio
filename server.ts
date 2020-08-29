@@ -20,12 +20,22 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
-app.post('/sendEmail', (req, res) => {
-  console.log(req.body);
+app.post("/sendEmail", (req, res) => {
+  const messageBody = `
+  <p>Someone reached out to you via your portfolio!</p>
+  <h2>Contact Information</h2>
+  <ul>
+    <li>Name: ${req.body.name}</li>
+    <li>Email: ${req.body.email}</li>
+    <li>Company: ${req.body.company}</li>
+    <li>Phone: ${req.body.phone}</li>
+  </ul>
+  <p>Message: ${req.body.message}</p>
+  `;
+  const firstName = req.body.name.split(' ')[0];
   res.json({
     error: false,
-    body: req.body,
-    message: `Logging email with from ${req.body.firstName}`
+    message: `Thanks for reaching out, ${firstName}. I look forward to talking with you soon!`,
   });
 });
 
