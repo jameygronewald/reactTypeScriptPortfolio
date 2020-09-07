@@ -4,12 +4,14 @@ import { Welcome } from "./pages/Welcome/Welcome";
 import { Projects } from "./pages/Projects/Projects";
 import { Contact } from "./pages/Contact/Contact";
 import { NavColumn } from "./components/NavColumn/NavColumn";
+import ScrollToTop from "./utils/ScrollToTop";
 import "./App.css";
 
 const App = () => {
   return (
     <div className="container">
       <Router>
+        <ScrollToTop/>
         <div className="navColumn">
           <NavColumn />
         </div>
