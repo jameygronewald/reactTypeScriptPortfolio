@@ -54,7 +54,7 @@ app.post("/sendEmail", (req, res) => {
       const firstName = req.body.name.split(" ")[0];
       res.json({
         error: false,
-        message: `Your email has been sent! Thanks for reaching out, ${firstName}-- I look forward to talking with you soon!`,
+        message: `Your message has been sent! Thanks for reaching out, ${firstName}-- I look forward to talking with you soon!`,
       });
     })
     .catch(err => {
