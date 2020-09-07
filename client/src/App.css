@@ -196,6 +196,11 @@ html, body {
     justify-items: center;
 }
 
+.iconGridTrackPacker .codeIcon:nth-last-child(4) {
+    height: 75%;
+    align-self: center;
+}
+
 #bookKeeperHeader {
     grid-column: 4 / 6;
     grid-row: 10;
@@ -251,6 +256,11 @@ html, body {
     display: grid;
     grid-template: 50% 50% / repeat(5, 1fr);
     justify-items: center;
+}
+
+.iconGridBookKeeper .codeIcon:nth-last-child(4) {
+    height: 75%;
+    align-self: center;
 }
 
 .contactContainer {
