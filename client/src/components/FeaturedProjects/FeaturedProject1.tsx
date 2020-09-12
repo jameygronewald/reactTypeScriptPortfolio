@@ -7,7 +7,7 @@ import { IconGridTrackPacker } from "../IconGrids/IconGridTrackPacker";
 export const FeaturedProject1 = () => {
   return (
     <>
-      <SmallHeader text="TrackPacker" id="trackPackerHeader" />
+      <SmallHeader text="TrackPacker" class="trackPackerHeader" />
       <ButtonLink id="repoButton1" buttonText="Github Repo" URL="https://github.com/jameygronewald/trackPacker" iconHTML=""/>
       <div className="trackPackerImageContainer">
         <img

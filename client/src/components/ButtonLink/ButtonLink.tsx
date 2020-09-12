@@ -1,12 +1,14 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
 
-export const ButtonLink = (props: {
-  buttonText: string;
-  URL: string;
-  id: string;
-  iconHTML: any;
-}) => {
+interface ButtonLinkProps {
+  buttonText: string
+  URL: string
+  id: string
+  iconHTML: any
+}
+
+export const ButtonLink = (props: ButtonLinkProps) => {
   return (
     <Button
       id={props.id}
