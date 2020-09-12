@@ -7,7 +7,7 @@ import { ButtonLink } from "../ButtonLink/ButtonLink";
 export const FeaturedProject2 = () => {
   return (
     <>
-      <SmallHeader text="Book Keeper" id="bookKeeperHeader" />
+      <SmallHeader text="Book Keeper" class="bookKeeperHeader" />
       <ButtonLink id="repoButton2" buttonText="Github Repo" URL="https://github.com/jameygronewald/bookKeeper" iconHTML=""/>
       <div className="bookKeeperImageContainer">
         <img

@@ -1,9 +1,10 @@
 import React from "react";
+import { TextProps } from "../../utils/interfaces";
 
-export const RegularText = (props: {class: string, text: string}) => {
+export const RegularText = (props: TextProps) => {
   return (
     <>
-      <div className={props.class}>
+      <div className={`regularText ${props.class}`}>
         {props.text}
       </div>
     </>

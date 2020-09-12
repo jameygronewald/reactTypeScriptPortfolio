@@ -1,10 +1,12 @@
 import React from "react";
 
-export const ContactIcon = (props: {
-  iconHTML: any;
-  URL: string;
-  id: string;
-}) => {
+interface ContactIconProps {
+  iconHTML: any
+  URL: string
+  id: string
+}
+
+export const ContactIcon = (props: ContactIconProps) => {
   return (
     <a
       id={props.id}

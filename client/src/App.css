@@ -1,397 +1,571 @@
 * {
-    height: 100%;
+  height: 100%;
 }
 
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    color: #222;
-    font-family: 'Inconsolata', monospace;
-    background-color: #f4f4f4;
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #222;
+  font-family: "Inconsolata", monospace;
+  background-color: #f4f4f4;
 }
 
 .container {
-    display: grid;
-    grid-template-columns: 20% auto;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 20% auto;
 }
 
 .navColumn {
-    position: fixed;
-    width: 20%;
-    grid-column: 1;
-    display: grid;
-    grid-template: 12% 12% 12% 24% 12% 6% 12% auto / 50% 50%;
-    border-right: solid 3px #222;
+  position: fixed;
+  width: 20%;
+  grid-column: 1;
+  display: grid;
+  grid-template: 12% 12% 12% 24% 12% 6% 12% auto / 50% 50%;
+  border-right: solid 3px #222;
+}
+
+.navBar {
+  display: none;
 }
 
 .navRow {
-    grid-column: 1 / 3;
-    display: grid;
-    align-items: center;
-    justify-items: center;
+  grid-column: 1 / 3;
+  display: grid;
+  align-items: center;
+  justify-items: center;
 }
 
 .navLink {
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: #222;
-    height: 1.5rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #222;
+  height: 1.5rem;
 }
 
 #gitHubIcon {
-    grid-column: 1 / 3;
-    grid-row: 5;
-    margin: auto;
+  grid-column: 1 / 3;
+  grid-row: 5;
+  margin: auto;
 }
 
 #linkedInIcon {
-    grid-column: 1 / 3;
-    grid-row: 7;
-    margin: auto;
+  grid-column: 1 / 3;
+  grid-row: 7;
+  margin: auto;
 }
 
 .navSpacer {
-    height: 300%;
+  height: 300%;
 }
 
 .mainColumn {
-    grid-column: 2;
+  grid-column: 2;
 }
 
 .welcomeContainer {
-    display: grid;
-    grid-template: repeat(8, 100px) / 5% 1fr 1fr 5%;
+  display: grid;
+  grid-template: repeat(6, 100px) 300px / 5% 1fr 1fr 5%;
+}
+
+.bigHeader {
+  font-size: 2.8rem;
 }
 
 .welcomeHeader {
-    grid-column: 1 / 5;
-    grid-row: 1;
-    margin: auto;
-    font-size: 3rem;
-    font-weight: bold;
-    height: auto;
+  grid-column: 1 / 5;
+  grid-row: 1;
+  margin: auto;
+  font-weight: bold;
+  height: auto;
 }
 
 .smallHeader {
-    margin: auto;
-    font-size: 2rem;
-    font-weight: 1000;
+  margin: auto;
+  font-size: 2rem;
+  font-weight: 1000;
 }
 
 .bioImage {
-    grid-column: 3 / 5;
-    grid-row: 3 / 5;
-    height: 300px;
-    width: auto;
-    margin: auto;
-    border-radius: 20px;
-    box-shadow: 10px 10px 8px 5px #222;
+  grid-column: 3 / 5;
+  grid-row: 3 / 5;
+  height: 25vw;
+  width: auto;
+  margin: auto;
+  border-radius: 20px;
+  box-shadow: 10px 10px 8px 5px #222;
 }
 
 .bioText1 {
-    height: auto;
-    margin: auto;
-    grid-column: 2;
-    grid-row: 2 / 4;
-    font-size: 1.2rem;
+  height: auto;
+  margin: auto;
+  grid-column: 2;
+  grid-row: 2 / 4;
+  font-size: 1.2rem;
 }
 
 .bioText2 {
-    height: auto;
-    margin: auto;
-    grid-column: 2;
-    grid-row: 5 / 7;
-    font-size: 1.2rem;
+  height: auto;
+  margin: auto;
+  grid-column: 2;
+  grid-row: 5 / 7;
+  font-size: 1.2rem;
 }
 
 .iconGridMERN {
-    grid-column: 2;
-    grid-row: 4;
-    display: grid;
-    grid-template: 100% / 20% 20% 20% 20% 20%;
-    column-gap: 15px;
+  grid-column: 2;
+  grid-row: 4;
+  display: grid;
+  grid-template: 100% / 20% 20% 20% 20% 20%;
+  column-gap: 15px;
 }
 
 .iconGridTools {
-    grid-column: 2 / 4;
-    grid-row: 7;
-    display: grid;
-    grid-template: 100% / repeat(9, 10%);
-    column-gap: 15px;
+  grid-column: 2 / 4;
+  grid-row: 7;
+  column-gap: 100px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.iconGridTools .codeIcon {
+  height: 100px;
 }
 
 .enlargeIcon {
-    font-size: 100px;
+  font-size: 100px;
 }
 
 .projectsContainer {
-    display: grid;
-    grid-template: repeat(20, 100px) / repeat(10, 1fr);
+  display: grid;
+  grid-template: repeat(20, 100px) / repeat(10, 1fr);
 }
 
 .projectsHeader {
-    grid-column: 1 / 11;
-    grid-row: 1;
-    margin: auto;
-    font-size: 3rem;
-    font-weight: bold;
-    height: auto;
+  grid-column: 1 / 11;
+  grid-row: 1;
+  margin: auto;
+  font-weight: bold;
+  height: auto;
 }
 
-#trackPackerHeader {
-    grid-column: 4 / 6;
-    grid-row: 2;
-    display: grid;
-    align-content: center;
+.trackPackerHeader {
+  grid-column: 4 / 6;
+  grid-row: 2;
+  display: grid;
+  align-content: center;
 }
 
 .trackPackerImageContainer {
-    grid-column: 2 / 8;
-    grid-row: 3 / 6;
-    display: grid;
-    justify-items: center;
+  grid-column: 2 / 8;
+  grid-row: 3 / 6;
+  display: grid;
+  justify-items: center;
 }
 
 .trackPackerImage {
-    border: outset 3px #222;
-    border-radius: 10px;
-    box-shadow: 5px 5px 4px 2.5px #222;
-    width: 100%
+  border: outset 3px #222;
+  border-radius: 10px;
+  box-shadow: 5px 5px 4px 2.5px #222;
+  width: 100%;
 }
 
 #repoButton1 {
-    grid-column: 8 / 11;
-    grid-row: 3 / 5;
-    height: 50px;
-    width: 175px;
-    align-self: center;
-    justify-self: center;
+  grid-column: 8 / 11;
+  grid-row: 3 / 5;
+  height: 50px;
+  width: 175px;
+  align-self: center;
+  justify-self: center;
 }
 
 #deployedButton1 {
-    grid-column: 8 / 11;
-    grid-row: 4 / 6;
-    height: 50px;
-    width: 175px;
-    align-self: center;
-    justify-self: center;
+  grid-column: 8 / 11;
+  grid-row: 4 / 6;
+  height: 50px;
+  width: 175px;
+  align-self: center;
+  justify-self: center;
 }
 
 .trackPackerDesc {
-    grid-column: 2 / 10;
-    grid-row: 6;
-    display: grid;
-    align-items: center;
-    text-align: justify;
+  grid-column: 2 / 10;
+  grid-row: 6;
+  display: grid;
+  align-items: center;
+  text-align: justify;
 }
 
 .iconGridTrackPacker {
-    grid-column: 2 / 10;
-    grid-row: 7 / 9;
-    row-gap: 10px;
-    column-gap: 50px;
-    display: grid;
-    grid-template: 50% 50% / repeat(6, 1fr);
-    justify-items: center;
+  grid-column: 2 / 10;
+  grid-row: 7 / 9;
+  row-gap: 10px;
+  column-gap: 50px;
+  display: grid;
+  grid-template: 50% 50% / repeat(6, 1fr);
+  justify-items: center;
 }
 
 .iconGridTrackPacker .codeIcon:nth-last-child(4) {
-    height: 75%;
-    align-self: center;
+  height: 75%;
+  align-self: center;
 }
 
-#bookKeeperHeader {
-    grid-column: 4 / 6;
-    grid-row: 10;
-    display: grid;
-    align-content: center;
+.bookKeeperHeader {
+  grid-column: 4 / 6;
+  grid-row: 10;
+  display: grid;
+  align-content: center;
 }
 
 .bookKeeperImageContainer {
-    grid-column: 2 / 8;
-    grid-row: 11 / 14;
-    display: grid;
-    justify-items: center;
+  grid-column: 2 / 8;
+  grid-row: 11 / 14;
+  display: grid;
+  justify-items: center;
 }
 
 .bookKeeperImage {
-    border: outset 3px #222;
-    border-radius: 10px;
-    box-shadow: 5px 5px 4px 2.5px #222;
-    width: 100%;
+  border: outset 3px #222;
+  border-radius: 10px;
+  box-shadow: 5px 5px 4px 2.5px #222;
+  width: 100%;
 }
 
 #repoButton2 {
-    grid-column: 8 / 11;
-    grid-row: 11 / 13;
-    height: 50px;
-    width: 175px;
-    align-self: center;
-    justify-self: center;
+  grid-column: 8 / 11;
+  grid-row: 11 / 13;
+  height: 50px;
+  width: 175px;
+  align-self: center;
+  justify-self: center;
 }
 
 #deployedButton2 {
-    grid-column: 8 / 11;
-    grid-row: 12 / 14;
-    height: 50px;
-    width: 175px;
-    align-self: center;
-    justify-self: center;
+  grid-column: 8 / 11;
+  grid-row: 12 / 14;
+  height: 50px;
+  width: 175px;
+  align-self: center;
+  justify-self: center;
 }
 
 .bookKeeperDesc {
-    grid-column: 2 / 10;
-    grid-row: 14;
-    display: grid;
-    align-items: center;
-    text-align: justify;
+  grid-column: 2 / 10;
+  grid-row: 14;
+  display: grid;
+  align-items: center;
+  text-align: justify;
 }
 
 .iconGridBookKeeper {
-    grid-column: 2 / 10;
-    grid-row: 15 / 17;
-    row-gap: 10px;
-    column-gap: 30px;
-    display: grid;
-    grid-template: 50% 50% / repeat(5, 1fr);
-    justify-items: center;
+  grid-column: 2 / 10;
+  grid-row: 15 / 17;
+  row-gap: 10px;
+  column-gap: 30px;
+  display: grid;
+  grid-template: 50% 50% / repeat(5, 1fr);
+  justify-items: center;
 }
 
 .iconGridBookKeeper .codeIcon:nth-last-child(4) {
-    height: 75%;
-    align-self: center;
+  height: 75%;
+  align-self: center;
 }
 
 .contactContainer {
-    display: grid;
-    grid-template: repeat(8, 100px) / repeat(10, 1fr);
+  display: grid;
+  grid-template: repeat(8, 100px) / repeat(10, 1fr);
 }
 
 .contactHeader {
-    grid-column: 1 / 11;
-    grid-row: 1;
-    margin: auto;
-    font-size: 3rem;
-    font-weight: bold;
-    height: auto;
+  grid-column: 1 / 11;
+  grid-row: 1;
+  margin: auto;
+  font-weight: bold;
+  height: auto;
 }
 
-#contactInfoHeader {
-    grid-column: 3 / 9;
-    grid-row: 2;
-    text-align: center;
+.contactInfoHeader {
+  grid-column: 3 / 9;
+  grid-row: 2;
+  text-align: center;
 }
 
 .contactInfoGrid {
-    grid-column: 3 / 10;
-    grid-row: 3 / 5;
-    display: grid;
-    grid-template: 1fr 1fr 1fr / 60% 40%;
-    align-items: center;
-    justify-items: start;
+  grid-column: 3 / 10;
+  grid-row: 3 / 5;
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 60% 40%;
+  align-items: center;
+  justify-items: start;
 }
 
 .contactInfoGrid div {
-    height: auto;
-    font-size: 1.3rem;
-    font-weight: 1000;
+  height: auto;
+  font-size: 1.3rem;
+  font-weight: 1000;
 }
 
 .contactInfoGrid #Email {
-    grid-row: 1 / 3;
-    grid-column: 1;
+  grid-row: 1 / 3;
+  grid-column: 1;
 }
 
 .contactInfoGrid #Phone {
-    grid-row: 2 / 4;
-    grid-column: 1;
+  grid-row: 2 / 4;
+  grid-column: 1;
 }
 
 .contactInfoGrid #gitHubButton {
-    grid-row: 1;
-    grid-column: 2;
-    width: 130px;
-    height: auto;
+  grid-row: 1;
+  grid-column: 2;
+  width: 130px;
+  height: auto;
 }
 
 .contactInfoGrid #linkedInButton {
-    grid-row: 2;
-    grid-column: 2;
-    width: 130px;
-    height: auto;
+  grid-row: 2;
+  grid-column: 2;
+  width: 130px;
+  height: auto;
 }
 
 .contactInfoGrid #resumeButton {
-    grid-row: 3;
-    grid-column: 2;
-    width: 130px;
-    height: auto;
+  grid-row: 3;
+  grid-column: 2;
+  width: 130px;
+  height: auto;
 }
 
-#formHeader {
-    grid-row: 6;
-    grid-column: 3 / 9;
-    margin-top: -3rem;
+.formHeader {
+  grid-row: 6;
+  grid-column: 3 / 9;
+  margin-top: -3rem;
 }
 
 form {
-    grid-column: 3 / 9;
-    grid-row: 6 / 10;
-    column-gap: 25px;
-    row-gap: 25px;
-    display: grid;
-    grid-template: 1fr 1fr 3fr 2fr / 1fr 1fr 1fr 1fr;
+  grid-column: 3 / 9;
+  grid-row: 6 / 10;
+  column-gap: 25px;
+  row-gap: 25px;
+  display: grid;
+  grid-template: 1fr 1fr 3fr 2fr / 1fr 1fr 1fr 1fr;
 }
 
 .formRow1 {
-    grid-row: 1;
-    grid-column: 1 / 5;
-    justify-self: center;
-    width: 100%;
-    display: grid;
-    grid-template: 100% / 1fr 1fr;
-    column-gap: 25px;
-    justify-items: center;
+  grid-row: 1;
+  grid-column: 1 / 5;
+  justify-self: center;
+  width: 100%;
+  display: grid;
+  grid-template: 100% / 1fr 1fr;
+  column-gap: 25px;
+  justify-items: center;
 }
 
 .formRow2 {
-    grid-row: 2;
-    grid-column: 1 / 5;
-    justify-self: center;
-    width: 100%;
-    display: grid;
-    grid-template: 100% / 1fr 1fr;
-    column-gap: 25px;
-    justify-items: center;
+  grid-row: 2;
+  grid-column: 1 / 5;
+  justify-self: center;
+  width: 100%;
+  display: grid;
+  grid-template: 100% / 1fr 1fr;
+  column-gap: 25px;
+  justify-items: center;
 }
 
 .input {
-    width: 100%;
+  width: 100%;
 }
 
 .formRow3 {
-    grid-row: 3;
-    grid-column: 1 / 5;
-    justify-self: center;
-    width: 100%;
+  grid-row: 3;
+  grid-column: 1 / 5;
+  justify-self: center;
+  width: 100%;
 }
 
 .messageInput {
-    width: 100%;
+  width: 100%;
 }
 
 .formRow4 {
-    grid-row: 4;
-    grid-column: 2 / 4;
-    justify-self: center;
+  grid-row: 4;
+  grid-column: 2 / 4;
+  justify-self: center;
 }
 
 .submitButton {
-    height: 50%;
+  height: 50%;
 }
 
 .emailToast {
+  height: auto;
+  margin-top: 25px;
+}
+
+@media (max-width: 1275px) {
+  .iconGridTools .codeIcon,
+  .iconGridTools .enlargeIcon {
+    height: 85px;
+    font-size: 85px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .iconGridTools {
+    align-items: stretch;
+  }
+
+  .bigHeader {
+    font-size: 2.4rem;
+  }
+
+  .codeIcon {
+    height: 75%;
+  }
+
+  .enlargeIcon {
+    font-size: 75px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .projectsHeader {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 950px) {
+  .container {
+    display: flex;
+  }
+
+  .welcomeContainer {
+    display: grid;
+    grid-template: 160px repeat(5, 100px) 300px / 5% 1fr 1fr 5%;
+  }
+
+  .navColumn {
+    display: none;
+  }
+
+  .navBar {
+    padding: 30px 0;
+    margin-bottom: 20px;
+    position: fixed;
+    width: 100%;
     height: auto;
-    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: solid 3px #222;
+    background: #f4f4f4;
+    z-index: 100;
+  }
+
+  .welcomeHeader {
+    grid-row: 1 / 3;
+  }
+
+  .codeIcon {
+    height: 60%;
+  }
+
+  .enlargeIcon {
+    font-size: 60px;
+  }
+
+  .bioImage {
+    height: auto;
+    width: 30vw;
+  }
+
+  #gitHubIcon {
+    font-size: 60px;
+  }
+
+  #linkedInIcon {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 850px) {
+  .bigHeader {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .bioText2 {
+    grid-row: 6;
+    grid-column: 2 / 4;
+  }
+  .iconGridMERN {
+    width: 80%;
+    grid-template-areas:
+      "a . b . c"
+      ". d . e e";
+  }
+
+  .iconGridMERN .codeIcon:nth-child(1) {
+    grid-area: a;
+  }
+  .iconGridMERN .codeIcon:nth-child(2) {
+    grid-area: b;
+  }
+  .iconGridMERN .codeIcon:nth-child(3) {
+    grid-area: c;
+  }
+  .iconGridMERN .codeIcon:nth-child(4) {
+    grid-area: d;
+  }
+  .iconGridMERN .codeIcon:nth-child(5) {
+    grid-area: e;
+  }
+}
+
+@media (max-width: 650px) {
+  .bigHeader {
+    font-size: 1.5rem;
+  }
+
+  .bioImage {
+    height: auto;
+    width: 35vw;
+  }
+
+  .iconGridMERN {
+    width: 65%;
+  }
+
+  .smallHeader,
+  #Email,
+  #Phone {
+    font-size: 1.1rem;
+  }
+
+  .regularText {
+    font-size: 0.8rem;
+  }
+
+  button {
+    width: 8vw;
+  }
+}
+
+@media (max-width: 550px) {
+  .bigHeader {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .bigHeader {
+    font-size: 0.8rem;
+  }
 }

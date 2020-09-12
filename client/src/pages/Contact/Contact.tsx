@@ -11,7 +11,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const resume = require("../../assets/resume.pdf");
 
-export const Contact = () => {
+export const Contact: React.FC = () => {
   const [formData, setFormData] = useState({});
 
   const sentEmailToast = (message: string) => toast.info(message);
@@ -39,7 +39,7 @@ export const Contact = () => {
         text="Let's connect and build something."
       />
       <SmallHeader
-        id="contactInfoHeader"
+        class="contactInfoHeader"
         text="Contact me via email or phone. Also, check out my GitHub, LinkedIn, and resume."
       />
       <div className="contactInfoGrid">
@@ -64,7 +64,7 @@ export const Contact = () => {
           iconHTML=""
         />
       </div>
-      <SmallHeader id="formHeader" text="Or send me a message here!" />
+      <SmallHeader class="formHeader" text="Or send me a message here!" />
       <form onSubmit={handleSubmit}>
         <div className="formRow1">
           <TextField

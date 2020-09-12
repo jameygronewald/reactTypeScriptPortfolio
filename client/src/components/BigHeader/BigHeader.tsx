@@ -1,5 +1,6 @@
 import React from "react";
+import { TextProps } from "../../utils/interfaces";
 
-export const BigHeader = (props: { class: string, text: string }) => {
-  return <div className={props.class}>{props.text}</div>;
+export const BigHeader = (props: TextProps) => {
+  return <div className={`bigHeader ${props.class}`}>{props.text}</div>;
 };
