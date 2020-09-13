@@ -128,6 +128,8 @@ body {
   grid-row: 7;
   column-gap: 100px;
   display: flex;
+  justify-content: stretch;
+  align-items: stretch;
   flex-wrap: wrap;
 }
 
@@ -397,7 +399,7 @@ form {
 }
 
 .submitButton {
-  height: 50%;
+  height: 45px;
 }
 
 .emailToast {
@@ -406,6 +408,10 @@ form {
 }
 
 @media (max-width: 1275px) {
+  .iconGridTools {
+    column-gap: 85px;
+  }
+
   .iconGridTools .codeIcon,
   .iconGridTools .enlargeIcon {
     height: 85px;
@@ -414,10 +420,6 @@ form {
 }
 
 @media (max-width: 1250px) {
-  .iconGridTools {
-    align-items: stretch;
-  }
-
   .bigHeader {
     font-size: 2.4rem;
   }
@@ -427,6 +429,18 @@ form {
   }
 
   .enlargeIcon {
+    font-size: 75px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .iconGridTools {
+    column-gap: 70px;
+  }
+
+  .iconGridTools .codeIcon,
+  .iconGridTools .enlargeIcon {
+    height: 75px;
     font-size: 75px;
   }
 }
@@ -441,14 +455,27 @@ form {
   }
 }
 
+@media (max-width: 1000px) {
+  .iconGridTools {
+    column-gap: 60px;
+  }
+}
+
 @media (max-width: 950px) {
   .container {
     display: flex;
   }
 
   .welcomeContainer {
-    display: grid;
     grid-template: 160px repeat(5, 100px) 300px / 5% 1fr 1fr 5%;
+  }
+
+  .projectsContainer {
+    grid-template: 160px repeat(19, 100px) / repeat(10, 1fr);
+  }
+
+  .contactContainer {
+    grid-template: 160px repeat(7, 100px) / repeat(10, 1fr);
   }
 
   .navColumn {
@@ -469,7 +496,9 @@ form {
     z-index: 100;
   }
 
-  .welcomeHeader {
+  .welcomeHeader,
+  .projectsHeader,
+  .contactHeader {
     grid-row: 1 / 3;
   }
 
@@ -481,23 +510,60 @@ form {
     font-size: 60px;
   }
 
+  .iconGridMERN {
+    grid-row: 3;
+    align-items: center;
+    justify-items: center;
+    width: 80%;
+    grid-template-areas:
+      ". . a . ."
+      "b b . c c"
+      ". d . e .";
+  }
+
+  .iconGridMERN .codeIcon,
+  .iconGridMERN .enlargeIcon {
+    height: 100px;
+    font-size: 100px;
+  }
+
+  .iconGridMERN .codeIcon:nth-child(1) {
+    grid-area: a;
+  }
+  .iconGridMERN .codeIcon:nth-child(2) {
+    grid-area: b;
+  }
+  .iconGridMERN .codeIcon:nth-child(3) {
+    grid-area: d;
+  }
+  .iconGridMERN .codeIcon:nth-child(4) {
+    grid-area: e;
+  }
+  .iconGridMERN .codeIcon:nth-child(5) {
+    grid-area: c;
+  }
+
+  .iconGridTools .codeIcon,
+  .iconGridTools .enlargeIcon {
+    height: 100px;
+    font-size: 100px;
+  }
+
   .bioText1 {
     grid-row: 2;
     grid-column: 2 / 5;
   }
 
+  .bioText2 {
+    grid-row: 6;
+    grid-column: 2 / 4;
+  }
+
   .bioImage {
     height: auto;
-    width: 30vw;
+    width: 28vw;
   }
 
-  #gitHubIcon {
-    font-size: 60px;
-  }
-
-  #linkedInIcon {
-    font-size: 60px;
-  }
   .contactInfoHeader,
   .formHeader {
     grid-column: 1 / 11;
@@ -509,35 +575,56 @@ form {
   .bigHeader {
     font-size: 1.8rem;
   }
+
+  .iconGridTools {
+    column-gap: 30px;
+  }
 }
 
 @media (max-width: 750px) {
-  .bioText2 {
-    grid-row: 6;
-    grid-column: 2 / 4;
-  }
-
-  .iconGridMERN {
-    width: 80%;
+  .iconGridTools {
+    display: grid;
     grid-template-areas:
-      "a . b . c"
-      ". d . e e";
+      ". a a a . b b b . c c c ."
+      "d d . e e e . f f f . g g"
+      ". h h h . i i i . j j j .";
   }
 
-  .iconGridMERN .codeIcon:nth-child(1) {
+  .iconGridTools .codeIcon:nth-child(1) {
     grid-area: a;
   }
-  .iconGridMERN .codeIcon:nth-child(2) {
+  .iconGridTools .codeIcon:nth-child(2) {
     grid-area: b;
   }
-  .iconGridMERN .codeIcon:nth-child(3) {
+  .iconGridTools .codeIcon:nth-child(3) {
     grid-area: c;
   }
-  .iconGridMERN .codeIcon:nth-child(4) {
+  .iconGridTools .codeIcon:nth-child(4) {
     grid-area: d;
   }
-  .iconGridMERN .codeIcon:nth-child(5) {
+  .iconGridTools .codeIcon:nth-child(5) {
     grid-area: e;
+  }
+  .iconGridTools .codeIcon:nth-child(6) {
+    grid-area: f;
+  }
+  .iconGridTools .codeIcon:nth-child(7) {
+    grid-area: g;
+  }
+  .iconGridTools .codeIcon:nth-child(8) {
+    grid-area: h;
+  }
+  .iconGridTools .codeIcon:nth-child(9) {
+    grid-area: i;
+  }
+  .iconGridTools .codeIcon:nth-child(10) {
+    grid-area: j;
+  }
+
+  .iconGridTools .codeIcon,
+  .iconGridTools .enlargeIcon {
+    height: 75px;
+    font-size: 75px;
   }
 
   .smallHeader {
@@ -555,13 +642,8 @@ form {
     font-size: 1.5rem;
   }
 
-  .bioImage {
-    height: auto;
-    width: 35vw;
-  }
-
   .iconGridMERN {
-    width: 65%;
+    width: 55%;
   }
 
   #Email,
@@ -606,5 +688,30 @@ form {
 @media (max-width: 450px) {
   .bigHeader {
     font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 350px) {
+  #Email,
+  #Phone {
+    font-size: 0.7rem;
+  }
+
+  form {
+    row-gap: 10px;
+  }
+
+  .messageInput {
+    height: 40%;
+  }
+
+  .formRow1,
+  .formRow2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .formRow4 {
+    margin-top: -200px;
   }
 }
