@@ -441,7 +441,10 @@ form {
 
 @media (max-width: 1150px) {
   .projectsContainer {
-    grid-template: repeat(5, 80px) 100px repeat(2, 80px) 25px repeat(11, 80px) / repeat(10, 1fr);
+    grid-template: repeat(5, 80px) 100px repeat(2, 80px) 25px repeat(11, 80px) / repeat(
+        10,
+        1fr
+      );
   }
 
   #repoButton1,
@@ -491,7 +494,10 @@ form {
   }
 
   .projectsContainer {
-    grid-template: 160px repeat(4, 80px) 100px repeat(2, 80px) 25px repeat(11, 80px) / repeat(10, 1fr);
+    grid-template: 160px repeat(4, 80px) 100px repeat(2, 80px) 25px repeat(
+        11,
+        80px
+      ) / repeat(10, 1fr);
   }
 
   .contactContainer {
@@ -520,14 +526,6 @@ form {
   .projectsHeader,
   .contactHeader {
     grid-row: 1 / 3;
-  }
-
-  .codeIcon {
-    height: 60%;
-  }
-
-  .enlargeIcon {
-    font-size: 60px;
   }
 
   .iconGridMERN {
@@ -657,6 +655,13 @@ form {
   }
 }
 
+@media (max-width: 700px) {
+  .iconGridTrackPacker .codeIcon,
+  .iconGridTrackPacker .enlargeIcon {
+    font-size: 60px;
+  }
+}
+
 @media (max-width: 650px) {
   .bigHeader {
     font-size: 1.5rem;
@@ -664,6 +669,33 @@ form {
 
   .iconGridMERN {
     width: 55%;
+  }
+
+  .projectsContainer {
+    grid-template: 160px repeat(4, 60px) 100px repeat(2, 60px) 25px repeat(4, 60px) 100px repeat(7, 60px) / repeat(10, 1fr);
+  }
+
+  .iconGridTrackPacker .codeIcon,
+  .iconGridTrackPacker .enlargeIcon,
+  .iconGridBookKeeper .codeIcon,
+  .iconGridBookKeeper .enlargeIcon {
+    font-size: 50px;
+  }
+
+  .iconGridTrackPacker .codeIcon:nth-last-child(4),
+  .iconGridBookKeeper .codeIcon:nth-last-child(4) {
+    height: 50%;
+    align-self: start;
+  }
+
+  #repoButton1,
+  #deployedButton1,
+  #repoButton2,
+  #deployedButton2 {
+    width: 100px;
+    height: 35px;
+    font-size: 0.6rem;
+    padding: 2px;
   }
 
   #Email,
@@ -691,8 +723,8 @@ form {
 }
 
 @media (max-width: 550px) {
-  .bigHeader {
-    font-size: 1.1rem;
+  .welcomeContainer {
+    grid-template: 160px repeat(3, 100px) 20px 100px 300px / 5% 1fr 1fr 5%;
   }
 
   .iconGridMERN .codeIcon,
@@ -707,6 +739,164 @@ form {
     font-size: 50px;
   }
 
+  .projectsContainer {
+    display: grid;
+    grid-template: repeat(36, 12vh) / repeat(8, 12.5vw);
+    justify-content: center;
+  }
+  
+  .projectsHeader {
+    grid-row: 2 / 4;
+    grid-column: 1 / 9;
+    text-align: center;
+    font-weight: bold;
+    height: auto;
+  }
+  
+  .trackPackerHeader {
+      grid-row: 4;
+      grid-column: 1 / 9;
+    display: grid;
+    align-content: center;
+  }
+  
+  .trackPackerImageContainer {
+      grid-row: 5 / 8;
+      grid-column: 2 / 8;
+      width: 100%;
+      height: auto;
+    display: grid;
+    justify-items: center;
+  }
+  
+  .trackPackerImage {
+    border: outset 3px #222;
+    border-radius: 10px;
+    box-shadow: 5px 5px 4px 2.5px #222;
+    width: 100%;
+  }
+  
+  #repoButton1 {
+      grid-row: 8 / 10;
+      grid-column: 3;
+    height: 35px;
+    width: 90px;
+    font-size: .4rem;
+    align-self: center;
+    justify-self: center;
+    margin-top: 7px;
+  }
+  
+  #deployedButton1 {
+    grid-row: 8 / 10;
+    grid-column: 6;
+    height: 35px;
+    width: 90px;
+    font-size: .4rem;
+    align-self: center;
+    justify-self: center;
+    margin-top: 7px;
+  }
+  
+  .trackPackerDesc {
+      grid-row: 9 / 11;
+      grid-column: 1 / 9;
+    margin-top: 5px;
+    display: grid;
+    align-items: center;
+    text-align: justify;
+    padding: 10px;
+  }
+  
+  .iconGridTrackPacker {
+    grid-row: 11;
+    grid-column: 1 / 9;
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(3, 1fr)
+  }
+
+  .iconGridTrackPacker .codeIcon,
+  .iconGridTrackPacker .enlargeIcon {
+    font-size: 60px;
+    height: 60px;
+  }
+  
+  .iconGridTrackPacker .codeIcon:nth-last-child(4) {
+    height: 80%;
+    align-self: start;
+  }
+  
+  .bookKeeperHeader {
+      grid-row: 16;
+      grid-column: 1 / 9;
+    display: grid;
+    align-content: center;
+  }
+  
+  .bookKeeperImageContainer {
+      grid-row: 17 / 21;
+      grid-column: 2 / 8;
+    display: grid;
+    justify-items: center;
+  }
+  
+  .bookKeeperImage {
+    border: outset 3px #222;
+    border-radius: 10px;
+    box-shadow: 5px 5px 4px 2.5px #222;
+    width: 100%;
+  }
+  
+  #repoButton2 {
+      grid-row: 21 / 23;
+      grid-column: 3;
+    height: 35px;
+    width: 90px;
+    font-size: .4rem;
+    align-self: center;
+    justify-self: center;
+    margin-top: 7px;
+  }
+  
+  #deployedButton2 {
+    grid-row: 21 / 23;
+    grid-column: 6;
+    height: 35px;
+    width: 90px;
+    font-size: .4rem;
+    align-self: center;
+    justify-self: center;
+    margin-top: 7px;
+  }
+  
+  .bookKeeperDesc {
+      grid-row: 22 / 24; 
+      grid-column: 1 / 9;
+      padding: 10px;
+    margin-top: 5px;
+    display: grid;
+    align-items: center;
+    text-align: justify;
+  }
+  
+  .iconGridBookKeeper {
+    grid-row: 24;
+    grid-column: 1 / 9;
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(3, 1fr)
+  }
+  
+  .iconGridBookKeeper .codeIcon,
+  .iconGridBookKeeper .enlargeIcon {
+    font-size: 60px;
+    height: 60px;
+  }
+  
+  .iconGridBookKeeper .codeIcon:nth-last-child(4) {
+    height: 80%;
+    align-self: start;
+  }
+
   .input,
   .messageInput {
     height: 80%;
@@ -719,7 +909,15 @@ form {
 
 @media (max-width: 450px) {
   .bigHeader {
-    font-size: 1rem;
+    font-size: 1.3rem;
+  }
+
+  .smallHeader {
+      font-size: 1rem;
+  }
+
+  .regularText {
+    font-size: .8rem;
   }
 }
 
@@ -727,6 +925,10 @@ form {
   #Email,
   #Phone {
     font-size: 0.7rem;
+  }
+
+  .bigHeader {
+      font-size: 1.2rem;
   }
 
   form {
