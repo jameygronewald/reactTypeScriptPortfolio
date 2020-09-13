@@ -5,7 +5,7 @@ import { RegularText } from "../../components/RegularText/RegularText";
 import { IconGridMERN } from "../../components/IconGrids/IconGridMERN";
 import { IconGridTools } from "../../components/IconGrids/IconGridTools";
 
-export const Welcome: React.FC = () => {
+export const Welcome: React.FC = (): JSX.Element => {
   return (
     <div className="welcomeContainer">
       <BigHeader class="welcomeHeader" text="Welcome. My name is Jamey." />

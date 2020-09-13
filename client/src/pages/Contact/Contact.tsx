@@ -9,31 +9,42 @@ import Button from "@material-ui/core/Button";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { MessageBodyObject } from "../../utils/interfaces";
 const resume = require("../../assets/resume.pdf");
 
-export const Contact: React.FC = () => {
-  const [formData, setFormData] = useState({});
+type FormElem = React.FormEvent<HTMLFormElement>;
 
-  const sentEmailToast = (message: string) => toast.info(message);
+export const Contact: React.FC = (): JSX.Element => {
+  const [formData, setFormData] = useState<MessageBodyObject>({});
 
-  const handleSubmit = (e: any) => {
+  const sentEmailToast = (message: string): React.ReactText => toast.info(message);
+
+  const handleSubmit = (e: FormElem): void => {
     e.preventDefault();
     submitMessage(formData);
   };
 
-  const submitMessage = (messageBody: {}) => {
-    axios.post("/sendEmail", messageBody).then(response => {
-      sentEmailToast(response.data.message);
-      // add a ref to clear out inputs
-    })
-    .catch(err => {
-      console.log(err)
-    });
+  const submitMessage = (messageBody: MessageBodyObject): void => {
+    console.log(messageBody);
+    axios
+      .post("/sendEmail", messageBody)
+      .then(response => {
+        sentEmailToast(response.data.message);
+        // add a ref to clear out inputs
+      })
+      .catch(err => {
+        console.log(err);
+      });
   };
 
   return (
     <div className="contactContainer">
-      <ToastContainer className="emailToast" position="top-right" autoClose={5000} hideProgressBar />
+      <ToastContainer
+        className="emailToast"
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar
+      />
       <BigHeader
         class="contactHeader"
         text="Let's connect and build something."

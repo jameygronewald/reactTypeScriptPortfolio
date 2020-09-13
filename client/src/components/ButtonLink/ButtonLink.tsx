@@ -1,14 +1,8 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
+import { ButtonLinkProps } from "../../utils/interfaces";
 
-interface ButtonLinkProps {
-  buttonText: string
-  URL: string
-  id: string
-  iconHTML: any
-}
-
-export const ButtonLink = (props: ButtonLinkProps) => {
+export const ButtonLink: React.FC<ButtonLinkProps> = (props: ButtonLinkProps): JSX.Element => {
   return (
     <Button
       id={props.id}

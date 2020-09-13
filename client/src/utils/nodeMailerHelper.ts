@@ -1,7 +1,5 @@
 import axios from "axios";
 
-export default {
-    sendEmail: function(messageBody: {}) {
+export const sendEmail = (messageBody: {}) => {
         return axios.post("/sendEmail", messageBody)
-    }
 };

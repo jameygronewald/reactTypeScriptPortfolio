@@ -1,12 +1,7 @@
 import React from "react";
+import { ContactIconProps } from "../../utils/interfaces";
 
-interface ContactIconProps {
-  iconHTML: any
-  URL: string
-  id: string
-}
-
-export const ContactIcon = (props: ContactIconProps) => {
+export const ContactIcon: React.FC<ContactIconProps> = (props: ContactIconProps): JSX.Element => {
   return (
     <a
       id={props.id}
