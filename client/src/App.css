@@ -675,6 +675,18 @@ form {
     font-size: 1.1rem;
   }
 
+  .iconGridMERN .codeIcon,
+  .iconGridMERN .enlargeIcon {
+      height: 60px;
+      font-size: 60px;
+  }
+
+  .iconGridTools .codeIcon,
+  .iconGridTools .enlargeIcon {
+    height: 50px;
+    font-size: 50px;
+  }
+
   .input,
   .messageInput {
     height: 80%;
@@ -687,7 +699,7 @@ form {
 
 @media (max-width: 450px) {
   .bigHeader {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "../NavLink/NavLink";
 
-export const NavBar = () => {
+export const NavBar: React.FC = (): JSX.Element => {
   return (
     <>
       <NavLink name="Welcome" pathName="welcome" />

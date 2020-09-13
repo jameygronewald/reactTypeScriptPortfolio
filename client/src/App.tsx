@@ -5,7 +5,7 @@ import { Projects } from "./pages/Projects/Projects";
 import { Contact } from "./pages/Contact/Contact";
 import { NavColumn } from "./components/NavColumn/NavColumn";
 import { NavBar } from "./components/NavBar/NavBar";
-import ScrollToTop from "./utils/ScrollToTop";
+import { ScrollToTop } from "./utils/ScrollToTop";
 import "./App.css";
 
 const App = () => {

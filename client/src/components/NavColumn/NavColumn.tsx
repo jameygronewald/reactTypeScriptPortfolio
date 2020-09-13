@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "../NavLink/NavLink";
 import { ContactIcon } from "../ContactIcon/ContactIcon";
 
-export const NavColumn = () => {
+export const NavColumn: React.FC = (): JSX.Element => {
   return (
     <>
       <NavLink name="Welcome" pathName="welcome" />

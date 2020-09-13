@@ -1,7 +1,7 @@
 import React from "react";
 import { CodeIcon } from "../CodeIcon/CodeIcon";
 
-export const IconGridBookKeeper = () => {
+export const IconGridBookKeeper: React.FC = (): JSX.Element => {
   return (
     <div className="iconGridBookKeeper">
       <CodeIcon
