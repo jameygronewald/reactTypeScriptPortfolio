@@ -476,6 +476,11 @@ form {
   .contactInfoHeader {
     font-size: 1.8rem;
   }
+
+  #gitHubIcon,
+  #linkedInIcon {
+    height: 80%;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -494,10 +499,9 @@ form {
   }
 
   .projectsContainer {
-    grid-template: 160px repeat(4, 80px) 100px repeat(2, 80px) 25px repeat(
-        11,
-        80px
-      ) / repeat(10, 1fr);
+    grid-template:
+      160px repeat(4, 80px) 100px repeat(2, 80px) 25px repeat(11, 80px)
+      / repeat(10, 1fr);
   }
 
   .contactContainer {
@@ -672,7 +676,9 @@ form {
   }
 
   .projectsContainer {
-    grid-template: 160px repeat(4, 60px) 100px repeat(2, 60px) 25px repeat(4, 60px) 100px repeat(7, 60px) / repeat(10, 1fr);
+    grid-template:
+      160px repeat(4, 60px) 100px repeat(2, 60px) 25px repeat(4, 60px)
+      100px repeat(7, 60px) / repeat(10, 1fr);
   }
 
   .iconGridTrackPacker .codeIcon,
@@ -744,7 +750,7 @@ form {
     grid-template: repeat(36, 12vh) / repeat(8, 12.5vw);
     justify-content: center;
   }
-  
+
   .projectsHeader {
     grid-row: 2 / 4;
     grid-column: 1 / 9;
@@ -752,67 +758,67 @@ form {
     font-weight: bold;
     height: auto;
   }
-  
+
   .trackPackerHeader {
-      grid-row: 4;
-      grid-column: 1 / 9;
+    grid-row: 4;
+    grid-column: 1 / 9;
     display: grid;
     align-content: center;
   }
-  
+
   .trackPackerImageContainer {
-      grid-row: 5 / 8;
-      grid-column: 2 / 8;
-      width: 100%;
-      height: auto;
+    grid-row: 5 / 8;
+    grid-column: 2 / 8;
+    width: 100%;
+    height: auto;
     display: grid;
     justify-items: center;
   }
-  
+
   .trackPackerImage {
     border: outset 3px #222;
     border-radius: 10px;
     box-shadow: 5px 5px 4px 2.5px #222;
     width: 100%;
   }
-  
+
   #repoButton1 {
-      grid-row: 8 / 10;
-      grid-column: 3;
+    grid-row: 8 / 10;
+    grid-column: 3;
     height: 35px;
     width: 90px;
-    font-size: .4rem;
+    font-size: 0.4rem;
     align-self: center;
     justify-self: center;
     margin-top: 7px;
   }
-  
+
   #deployedButton1 {
     grid-row: 8 / 10;
     grid-column: 6;
     height: 35px;
     width: 90px;
-    font-size: .4rem;
+    font-size: 0.4rem;
     align-self: center;
     justify-self: center;
     margin-top: 7px;
   }
-  
+
   .trackPackerDesc {
-      grid-row: 9 / 11;
-      grid-column: 1 / 9;
+    grid-row: 9 / 11;
+    grid-column: 1 / 9;
     margin-top: 5px;
     display: grid;
     align-items: center;
     text-align: justify;
-    padding: 10px;
+    padding: 0 15px;
   }
-  
+
   .iconGridTrackPacker {
     grid-row: 11;
     grid-column: 1 / 9;
     display: grid;
-    grid-template: repeat(4, 1fr) / repeat(3, 1fr)
+    grid-template: repeat(4, 1fr) / repeat(3, 1fr);
   }
 
   .iconGridTrackPacker .codeIcon,
@@ -820,78 +826,80 @@ form {
     font-size: 60px;
     height: 60px;
   }
-  
+
   .iconGridTrackPacker .codeIcon:nth-last-child(4) {
     height: 80%;
     align-self: start;
   }
-  
+
   .bookKeeperHeader {
-      grid-row: 16;
-      grid-column: 1 / 9;
+    grid-row: 16;
+    grid-column: 1 / 9;
     display: grid;
     align-content: center;
   }
-  
+
   .bookKeeperImageContainer {
-      grid-row: 17 / 21;
-      grid-column: 2 / 8;
+    grid-row: 17 / 20;
+    grid-column: 2 / 8;
+    width: 100%;
+    height: auto;
     display: grid;
     justify-items: center;
   }
-  
+
   .bookKeeperImage {
     border: outset 3px #222;
     border-radius: 10px;
     box-shadow: 5px 5px 4px 2.5px #222;
     width: 100%;
   }
-  
+
   #repoButton2 {
-      grid-row: 21 / 23;
-      grid-column: 3;
+    grid-row: 20 / 22;
+    grid-column: 3;
     height: 35px;
     width: 90px;
-    font-size: .4rem;
+    font-size: 0.4rem;
     align-self: center;
     justify-self: center;
     margin-top: 7px;
   }
-  
+
   #deployedButton2 {
-    grid-row: 21 / 23;
+    grid-row: 20 / 22;
     grid-column: 6;
     height: 35px;
     width: 90px;
-    font-size: .4rem;
+    font-size: 0.4rem;
     align-self: center;
     justify-self: center;
     margin-top: 7px;
   }
-  
+
   .bookKeeperDesc {
-      grid-row: 22 / 24; 
-      grid-column: 1 / 9;
-      padding: 10px;
+    grid-row: 21 / 23;
+    grid-column: 1 / 9;
+    padding: 0 15px;
     margin-top: 5px;
     display: grid;
     align-items: center;
     text-align: justify;
   }
-  
+
   .iconGridBookKeeper {
-    grid-row: 24;
+    grid-row: 23;
     grid-column: 1 / 9;
     display: grid;
-    grid-template: repeat(4, 1fr) / repeat(3, 1fr)
+    grid-template: repeat(4, 1fr) / repeat(3, 1fr);
   }
-  
+
   .iconGridBookKeeper .codeIcon,
   .iconGridBookKeeper .enlargeIcon {
     font-size: 60px;
     height: 60px;
   }
-  
+
   .iconGridBookKeeper .codeIcon:nth-last-child(4) {
     height: 80%;
     align-self: start;
@@ -913,22 +921,30 @@ form {
   }
 
   .smallHeader {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 
   .regularText {
-    font-size: .8rem;
+    font-size: 0.8rem;
+  }
+
+  .projectsContainer {
+    grid-template: repeat(36, 8vh) / repeat(8, 12.5vw);
   }
 }
 
 @media (max-width: 350px) {
+  .projectsContainer {
+    grid-template: repeat(36, 7vh) / repeat(8, 12.5vw);
+  }
+
   #Email,
   #Phone {
     font-size: 0.7rem;
   }
 
   .bigHeader {
-      font-size: 1.2rem;
+    font-size: 1.2rem;
   }
 
   form {
