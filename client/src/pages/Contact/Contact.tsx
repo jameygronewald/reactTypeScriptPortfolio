@@ -17,24 +17,22 @@ type FormElem = React.FormEvent<HTMLFormElement>;
 export const Contact: React.FC = (): JSX.Element => {
   const [formData, setFormData] = useState<MessageBodyObject>({});
 
-  const sentEmailToast = (message: string): React.ReactText => toast.info(message);
+  const sentEmailToast = (message: string): React.ReactText =>
+    toast.info(message);
 
   const handleSubmit = (e: FormElem): void => {
     e.preventDefault();
     submitMessage(formData);
   };
 
-  const submitMessage = (messageBody: MessageBodyObject): void => {
-    console.log(messageBody);
-    axios
-      .post("/sendEmail", messageBody)
-      .then(response => {
-        sentEmailToast(response.data.message);
-        // add a ref to clear out inputs
-      })
-      .catch(err => {
-        console.log(err);
-      });
+  const submitMessage = async (messageBody: MessageBodyObject): Promise<void> => {
+    try {
+      const response = await axios.post("/sendEmail", messageBody);
+      sentEmailToast(response.data.message);
+      // add a ref to clear out inputs
+    } catch (err) {
+      console.error(err.message);
+    }
   };
 
   return (

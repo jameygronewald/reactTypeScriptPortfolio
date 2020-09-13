@@ -23,7 +23,7 @@ app.get("*", (req, res) => {
 });
 
 app.post("/sendEmail", (req, res) => {
-  const messageBody = `
+  const messageBody: string = `
   <p>Someone reached out to you via your portfolio!</p>
   <h2>Contact Information</h2>
   <ul>
@@ -45,7 +45,7 @@ app.post("/sendEmail", (req, res) => {
 
   transporter
     .sendMail({
-      from: `'Nodemailer Contact: ${req.body.name}' <jameygronewaldportfolio@gmail.com>`,
+      from: `Nodemailer Contact: ${req.body.name} <jameygronewaldportfolio@gmail.com>`,
       to: "jrgronewald@gmail.com",
       subject: "Someone contacted you via Nodemailer from your Portfolio",
       html: messageBody,
