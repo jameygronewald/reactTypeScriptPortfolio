@@ -358,17 +358,14 @@ form {
 
 .formRow1 {
   grid-row: 1;
-  grid-column: 1 / 5;
-  justify-self: center;
-  width: 100%;
-  display: grid;
-  grid-template: 100% / 1fr 1fr;
-  column-gap: 25px;
-  justify-items: center;
 }
 
 .formRow2 {
   grid-row: 2;
+}
+
+.formRow1,
+.formRow2 {
   grid-column: 1 / 5;
   justify-self: center;
   width: 100%;
@@ -438,6 +435,10 @@ form {
   .projectsHeader {
     font-size: 2.2rem;
   }
+
+  .contactInfoHeader {
+    font-size: 1.8rem;
+  }
 }
 
 @media (max-width: 950px) {
@@ -480,6 +481,11 @@ form {
     font-size: 60px;
   }
 
+  .bioText1 {
+    grid-row: 2;
+    grid-column: 2 / 5;
+  }
+
   .bioImage {
     height: auto;
     width: 30vw;
@@ -491,6 +497,11 @@ form {
 
   #linkedInIcon {
     font-size: 60px;
+  }
+  .contactInfoHeader,
+  .formHeader {
+    grid-column: 1 / 11;
+    padding: 0 10px;
   }
 }
 
@@ -505,6 +516,7 @@ form {
     grid-row: 6;
     grid-column: 2 / 4;
   }
+
   .iconGridMERN {
     width: 80%;
     grid-template-areas:
@@ -527,6 +539,15 @@ form {
   .iconGridMERN .codeIcon:nth-child(5) {
     grid-area: e;
   }
+
+  .smallHeader {
+    font-size: 1.4rem;
+  }
+
+  #Email,
+  #Phone {
+    font-size: 1.1rem;
+  }
 }
 
 @media (max-width: 650px) {
@@ -543,24 +564,42 @@ form {
     width: 65%;
   }
 
-  .smallHeader,
   #Email,
   #Phone {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .regularText {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
-  button {
-    width: 8vw;
+  .contactInfoGrid {
+    grid-column: 2 / 11;
+  }
+
+  .contactInfoGrid #gitHubButton,
+  .contactInfoGrid #linkedInButton,
+  .contactInfoGrid #resumeButton {
+    width: 110px;
+  }
+
+  form {
+    grid-column: 2 / 10;
   }
 }
 
 @media (max-width: 550px) {
   .bigHeader {
     font-size: 1.1rem;
+  }
+
+  .input,
+  .messageInput {
+    height: 80%;
+  }
+
+  form .MuiFormLabel-root {
+    line-height: 0.3;
   }
 }
 
