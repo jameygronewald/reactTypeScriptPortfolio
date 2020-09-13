@@ -1,7 +1,6 @@
 const express = require("express");
 const path = require("path");
 const nodemailer = require("nodemailer");
-// const xoauth2 = require("xoauth2");
 
 const app = express();
 
