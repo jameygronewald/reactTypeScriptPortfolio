@@ -9,7 +9,6 @@ export const nodemailerSend = async ({
   phone,
   message,
 }) => {
-
   const messageBody: string = `
     <p>Someone reached out to you via your portfolio!</p>
     <h2>Contact Information</h2>
@@ -21,11 +20,7 @@ export const nodemailerSend = async ({
     </ul>
     <p>Message: ${message}</p>
     `;
-    console.log(messageBody);
-    console.log(process.env.EMAILSERVICE)
-    console.log(process.env.SENDER)
-    console.log(process.env.PASSWORD)
-    console.log(process.env.RECIPIENT)
+
   try {
     const transporter = await nodemailer.createTransport({
       service: process.env.EMAILSERVICE,
@@ -43,9 +38,7 @@ export const nodemailerSend = async ({
     });
     const firstName = name.split(' ')[0];
 
-    return {
-      message: `Your message has been sent! Thanks for reaching out, ${firstName}-- I look forward to talking with you soon!`,
-    };
+    return `Your message has been sent! Thanks for reaching out, ${firstName}-- I look forward to talking with you soon!`;
   } catch (error) {
     throw error;
   }
