@@ -4,8 +4,8 @@ export interface TextProps {
 }
 
 export interface MessageBodyObject {
-  name?: string;
-  email?: string;
+  name: string;
+  email: string;
   company?: string;
   phone?: string;
   message?: string;

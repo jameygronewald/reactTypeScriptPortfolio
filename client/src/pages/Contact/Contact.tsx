@@ -12,15 +12,18 @@ import "react-toastify/dist/ReactToastify.css";
 import { MessageBodyObject } from "../../utils/interfaces";
 const resume = require("../../assets/resume.pdf");
 
-type FormElem = React.FormEvent<HTMLFormElement>;
+type FormEvent = React.FormEvent<HTMLFormElement>;
 
 export const Contact: React.FC = (): JSX.Element => {
-  const [formData, setFormData] = useState<MessageBodyObject>({});
+  const [formData, setFormData] = useState<MessageBodyObject>({
+    name: "",
+    email: ""
+  });
 
   const sentEmailToast = (message: string): React.ReactText =>
     toast.info(message);
 
-  const handleSubmit = (e: FormElem): void => {
+  const handleSubmit = (e: FormEvent): void => {
     e.preventDefault();
     submitMessage(formData);
   };
@@ -82,7 +85,7 @@ export const Contact: React.FC = (): JSX.Element => {
             label="Name"
             variant="outlined"
             name="name"
-            onChange={e => {
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
               setFormData({ ...formData, name: e.target.value });
             }}
           />
@@ -92,7 +95,7 @@ export const Contact: React.FC = (): JSX.Element => {
             label="Email"
             variant="outlined"
             name="email"
-            onChange={e => {
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
               setFormData({ ...formData, email: e.target.value });
             }}
           />
@@ -103,7 +106,7 @@ export const Contact: React.FC = (): JSX.Element => {
             label="Company"
             variant="outlined"
             name="company"
-            onChange={e => {
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
               setFormData({ ...formData, company: e.target.value });
             }}
           />
@@ -112,7 +115,7 @@ export const Contact: React.FC = (): JSX.Element => {
             label="Phone Number"
             variant="outlined"
             name="email"
-            onChange={e => {
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
               setFormData({ ...formData, phone: e.target.value });
             }}
           />
@@ -125,7 +128,7 @@ export const Contact: React.FC = (): JSX.Element => {
             rows={4}
             variant="outlined"
             name="message"
-            onChange={e => {
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
               setFormData({ ...formData, message: e.target.value });
             }}
           />
