@@ -23,7 +23,9 @@ export const nodemailerSend = async ({
 
   try {
     const transporter = await nodemailer.createTransport({
-      service: process.env.EMAILSERVICE,
+      host: process.env.EMAIL_SERVICE,
+      port: 465,
+      secure: true, // use SSL
       auth: {
         user: process.env.SENDER,
         pass: process.env.PASSWORD,
