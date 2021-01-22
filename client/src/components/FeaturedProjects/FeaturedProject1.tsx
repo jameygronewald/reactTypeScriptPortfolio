@@ -7,11 +7,11 @@ import { IconGridTrackPacker } from "../IconGrids/IconGridTrackPacker";
 export const FeaturedProject1: React.FC = (): JSX.Element => {
   return (
     <>
-      <SmallHeader text="TrackPacker" class="trackPackerHeader" />
+      <SmallHeader text="TrackPacker2" class="trackPackerHeader" />
       <ButtonLink
         id="repoButton1"
         buttonText="Github Repo"
-        URL="https://github.com/jameygronewald/trackPacker"
+        URL="https://github.com/jameygronewald/trackPacker2"
         iconHTML=""
       />
       <div className="trackPackerImageContainer">
@@ -24,7 +24,7 @@ export const FeaturedProject1: React.FC = (): JSX.Element => {
       <ButtonLink
         id="deployedButton1"
         buttonText="Deployed Site"
-        URL="https://trackpacker.herokuapp.com/"
+        URL="https://trackpacker2.herokuapp.com/"
         iconHTML=""
       />
       <RegularText
